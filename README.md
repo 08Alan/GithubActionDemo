@@ -39,7 +39,7 @@ Clone至本地後可利用Visual Studio 建置此天氣API項目
 
   2. Github Security
 
-    - Dependabot：掃描代碼安全漏洞
+    - Dependabot：掃描代碼安全漏洞
 
     - Code Scanning：利用CodeQL進行CICD流程時的代碼漏洞掃描
 
