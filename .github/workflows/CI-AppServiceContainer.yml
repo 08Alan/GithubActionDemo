@@ -1,4 +1,4 @@
-name: DepolyToAppServiceContainer
+name: CI-AppServiceContainer
 
 on:
   push:
