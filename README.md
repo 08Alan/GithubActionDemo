@@ -17,13 +17,21 @@ Azure Resource：
 ![](README/2020-10-22-16-34-13.png)
 
 ## 項目說明
-alanAPI是一個利用.NET Core撰寫的API接口
+alanAPI是一個利用.NET Core撰寫的天氣API接口
 此項目僅有一個API路由
 EX: `contoso.azurewebsites.net/WeatherForecast`
 
+Clone至本地後可利用Visual Studio 建置此天氣API項目
+
+![](Demo1/2020-10-22-16-53-21.png)
+
+![](Demo1/2020-10-22-16-54-45.png)
+
+> 注意: 採用Docker進行建置需安裝Docker client相關工具
+
 ## Demo 環節
 
-> 1. 利用Github Action 完成App Service中的部署
+ 1. 利用Github Action 完成App Service中的部署
 
     - 部署一：將此API部署至App Service Windows中
 
@@ -36,5 +44,5 @@ EX: `contoso.azurewebsites.net/WeatherForecast`
     - Code Scanning：利用CodeQL進行CICD流程時的代碼漏洞掃描
 
   3. Github CodeSpaces 代碼遠程協作功能
-  
+
   4. Github Project 達成項目工作流程控管
