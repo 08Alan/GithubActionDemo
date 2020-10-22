@@ -33,7 +33,7 @@ Clone至本地後可利用Visual Studio 建置此天氣API項目
 
  1. 利用Github Action 完成App Service中的部署
 
-    - 部署一：將此API部署至App Service Windows中
+    - [部署一：將此API部署至App Service Windows中](https://github.com/08Alan/GithubActionDemo/blob/master/Demo1-1.md)
 
     - 部署二：將此API部署至App Service for Container且利用Visual Studio推送容器
 
