@@ -38,30 +38,11 @@ jobs:
         run: |
           dotnet build --configuration Release
           dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp' 
-
-#       - name: 'Login via Azure CLI'
-#         uses: azure/login@v1
-#         with:
-#            creds: ${{secrets.AZURE_CREDENTIALS}}
-#            enable-AzPSSession: true 
-        
-      - uses: azure/docker-login@v1
-        with:
-          login-server: gadacr.azurecr.io
-          username: ${{ secrets.REGISTRY_USERNAME }}
-          password: ${{ secrets.REGISTRY_PASSWORD }}
-
-      - run: |
-          docker build . -t gadacr.azurecr.io/AlanAPI:${{ github.sha }}
           docker push gadacr.azurecr.io/AlanAPI:${{ github.sha }} 
 
-     # - uses: azure/webapps-deploy@v2
-     #   with:
-     #     app-name: '${{ env.AZURE_WEBAPP_NAME }}'
-     #     images: 'gadacr.azurecr.io/AlanAPI:${{ github.sha }}'
       - uses: azure/webapps-deploy@v2
         with:
           app-name: '${{ env.AZURE_WEBAPP_NAME }}'
           publish-profile: ${{ secrets.azureWebAppPublishProfile }}
-          images: 'gadacr.azurecr.io/AlanAPI:${{ github.sha }}'
+          images: 'gadacr.azurecr.io/AlanAPI:latest'
       
