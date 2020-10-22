@@ -15,7 +15,7 @@ on:
 #
 # 2. Change these variables for your configuration:
 env:
-  AZURE_WEBAPP_NAME: 'GAD-WebAppDemo'    # set this to your application's name
+  AZURE_WEBAPP_NAME: 'GAD-ContainerDemo'    # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
   DOTNET_VERSION: '3.1.100'           # set this to the dot net version to use
 
@@ -25,25 +25,25 @@ jobs:
     steps:
 
       # Checkout the repoff
-#       - uses: actions/checkout@master
+      - uses: actions/checkout@master
       
-#       # Setup .NET Core SDK
-#       - name: Setup .NET Core
-#         uses: actions/setup-dotnet@v1
-#         with:
-#           dotnet-version: ${{ env.DOTNET_VERSION }} 
-      
-#       # Run dotnet build and publish
-#       - name: dotnet build and publish
-#         run: |
-#           dotnet build --configuration Release
-#           dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp' 
-
-      - name: 'Login via Azure CLI'
-        uses: azure/login@v1
+      # Setup .NET Core SDK
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
         with:
-           creds: ${{secrets.AZURE_CREDENTIALS}}
-           enable-AzPSSession: true 
+          dotnet-version: ${{ env.DOTNET_VERSION }} 
+      
+      # Run dotnet build and publish
+      - name: dotnet build and publish
+        run: |
+          dotnet build --configuration Release
+          dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp' 
+
+#       - name: 'Login via Azure CLI'
+#         uses: azure/login@v1
+#         with:
+#            creds: ${{secrets.AZURE_CREDENTIALS}}
+#            enable-AzPSSession: true 
         
       - uses: azure/docker-login@v1
         with:
@@ -59,4 +59,9 @@ jobs:
      #   with:
      #     app-name: '${{ env.AZURE_WEBAPP_NAME }}'
      #     images: 'gadacr.azurecr.io/AlanAPI:${{ github.sha }}'
+      - uses: azure/webapps-deploy@v2
+        with:
+          app-name: '${{ env.AZURE_WEBAPP_NAME }}'
+          publish-profile: ${{ secrets.azureWebAppPublishProfile }}
+          images: 'gadacr.azurecr.io/AlanAPI:${{ github.sha }}'
       
