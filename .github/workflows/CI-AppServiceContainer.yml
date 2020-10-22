@@ -42,8 +42,8 @@ jobs:
       - name: 'Login via Azure CLI'
         uses: azure/login@v1
         with:
-           creds: ${{ secrets.AZURE_CREDENTIALS }}
-           enable-AzPSSession: true
+           creds: ${{secrets.AZURE_CREDENTIALS}}
+           enable-AzPSSession: true 
         
       - uses: azure/docker-login@v1
         with:
