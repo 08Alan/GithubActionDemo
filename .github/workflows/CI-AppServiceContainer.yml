@@ -43,5 +43,5 @@ jobs:
         with:
           app-name: '${{ env.AZURE_WEBAPP_NAME }}'
           publish-profile: ${{ secrets.azureWebAppContainerPublishProfile }}
-          images: 'gadacr.azurecr.io/AlanAPI:latest'
+          images: 'gadacr.azurecr.io/alanapi:latest'
       
