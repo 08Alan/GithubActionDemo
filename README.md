@@ -35,14 +35,14 @@ Clone至本地后可利用Visual Studio 建置此天气API项目
 
     - [部署一：将API部署至App Service Windows中](https://github.com/08Alan/GithubActionDemo/blob/master/Demo1-1.md)
 
-    - [部署二：将API部署至App Service for Container且利用Visual Studio推送容器](https://github.com/08Alan/GithubActionDemo/blob/master/Demo1-2.md)
+    - [部署二：将API部署至App Service for Container且利用Visual Studio推送容器]](https://github.com/08Alan/GithubActionDemo/blob/master/Demo1-2.md)
 
   2. Github Security
 
-    - Dependabot：扫描代码安全漏洞
+    - [TBD-Dependabot：扫描代码安全漏洞](https://github.com/08Alan/GithubActionDemo/projects/1)
 
-    - Code Scanning：利用CodeQL进行CICD流程时的代码漏洞扫描
+    - [TBD-Code Scanning：利用CodeQL进行CICD流程时的代码漏洞扫描](https://github.com/08Alan/GithubActionDemo/projects/1)
 
-  3. Github CodeSpaces 代码远程协作功能
+  3. [TBD-Github CodeSpaces 代码远程协作功能](https://github.com/08Alan/GithubActionDemo/projects/1)
 
-  4. Github Project 达成项目工作流程控管
+  4. [TBD-Github Project 达成项目工作流程控管](https://github.com/08Alan/GithubActionDemo/projects/1)
