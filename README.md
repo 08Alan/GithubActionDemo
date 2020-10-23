@@ -35,7 +35,7 @@ Clone至本地后可利用Visual Studio 建置此天气API项目
 
     - [部署一：将API部署至App Service Windows中](https://github.com/08Alan/GithubActionDemo/blob/master/Demo1-1.md)
 
-    - [部署二：将API部署至App Service for Container且利用Visual Studio推送容器]](https://github.com/08Alan/GithubActionDemo/blob/master/Demo1-2.md)
+    - [部署二：将API部署至App Service for Container且利用Visual Studio推送容器](https://github.com/08Alan/GithubActionDemo/blob/master/Demo1-2.md)
 
   2. Github Security
 

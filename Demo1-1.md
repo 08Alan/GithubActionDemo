@@ -1,5 +1,5 @@
 
-# Demo1-1:利用Github Action 部署至App Service(windows)
+# Demo1-1:利用Github Action 部署至Azure App Service
 
 进入Github Repo中 并且点击Actions进行CICD Pipeline流水线设置
 
