@@ -1,31 +1,31 @@
 
 # Demo1-1:利用Github Action 部署至App Service(windows)
 
-進入Github Repo中 並且點擊Actions進行CICD Pipeline流水線設置
+进入Github Repo中 并且点击Actions进行CICD Pipeline流水线设置
 
-在Actions之中新建一個Workflow
+在Actions之中新建一个Workflow
 
 ![](Demo1/2020-10-22-16-57-56.png)
 
-選取 .NET Core Template
+选取 .NET Core Template
 
 ![](Demo1/2020-10-22-16-58-40.png)
 
-接著獲得dotnet-core的workflows yml檔案
+接着获得dotnet-core的workflows yml档案
 
 ![](Demo1/2020-10-22-17-00-22.png)
 
-接著此Demo並不將CICD流水線分開進行設置, 而是CI結束後進行CD
+接着此Demo并不将CICD流水线分开进行设置, 而是CI结束后进行CD
 
-故直接在右方的Marketplace中Search `Azure WebApp`
+在右方的Marketplace中Search `Azure WebApp`
 
 ![](Demo1/2020-10-22-17-04-32.png)
 
-並將以下相關yml字串複製到左方的Jobs steps之中
+并将以下相关yml字串复制到左方的Jobs Steps之中
 
 ![](Demo1/2020-10-22-17-06-26.png)
 
-該Marketplace的[參考文檔](https://github.com/marketplace/actions/azure-webapp)
+该Marketplace的[参考文档](https://github.com/marketplace/actions/azure-webapp)
 
 ```
       # Deploy to Azure Web apps
@@ -37,7 +37,7 @@
           package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp'
 ```
 
-接著新增環境變量, 在jobs 之上(需修改預先創好的WebApp目標名稱)
+接着新增环境变量, 在jobs 之上(需修改预先创好的WebApp目标名称)
 
 ```
 env:
@@ -46,7 +46,7 @@ env:
   DOTNET_VERSION: '3.1.100'
 ```
 
-完整的yml 已設置完畢 參考如下
+完整的yml 已设置完毕 参考如下
 
 ```
 name: Deploy ASP.NET Core app to Azure Web App
@@ -101,35 +101,35 @@ jobs:
 
 ```
 
-接著我們需要獲取App Service中的發佈配置文件並且將其加入到Github Secrets之中
+接着我们需要获取App Service中的发布配置文件并且将其加入到Github Secrets之中
 
-點擊Setting>Secrets 新增Secret
+点击Setting>Secrets 新增Secret
 
 ![](Demo1/2020-10-22-17-11-58.png)
 
-設置secrets名稱與上方yml之內的參數名稱相同
-此處採用ALANAPPSERVICEPROFILE
+设置secrets名称与上方yml之内的参数名称相同
+此处采用ALANAPPSERVICEPROFILE
 
-Value則需要下載App Service的發布配置文件並且將其全部複製貼上
+Value部分利用Azure Portal下载App Service的发布配置文件并且将其全部复制贴上
 
 ![](Demo1/2020-10-22-17-13-45.png)
 
 ![](Demo1/2020-10-22-17-14-13.png)
 
-到此處已完成所有相關CICD設置
+到此处已完成所有相关CICD设置
 
-回到Github Action之中 進行Pipeline workflows Commit
+回到Github Action之中 进行Pipeline workflows Commit
 
 ![](Demo1/2020-10-22-17-15-44.png)
 
-此時CICD流程已經啟動 點回Actions頁籤 選取剛剛設置的Workflows進行查看
+此时CICD流程已经启动 点回Actions页签 选取刚刚设置的Workflows进行查看
 
 ![](Demo1/2020-10-22-17-17-47.png)
 
-CICD流水線結束後 項目發布完成
+CICD流水线结束后 项目发布完成
 
 ![](Demo1/2020-10-22-17-18-43.png)
 
-訪問App Service 並且加入後方路由地址後 可獲得相關天氣資訊
+访问App Service 并且加入后方路由地址后 可获得相关天气资讯
 
 ![](Demo1/2020-10-22-17-19-53.png)

@@ -1,12 +1,12 @@
 # GithubActionDemo New Features Demo
 
-## 預先環境配置：
+## 环境配置：
 
 - Github Personal Account
 - Visual Studio 2019 or Visual Studio Code
 - Azure CLI Client Tool
 
-## 預先準備Azure資源
+## Azure资源预配
 
 Azure Resource：
 -	2 * App Service
@@ -16,33 +16,33 @@ Azure Resource：
 
 ![](README/2020-10-22-16-34-13.png)
 
-## 項目說明
-alanAPI是一個利用.NET Core撰寫的天氣API接口
-此項目僅有一個API路由
+## 项目说明
+alanAPI是一个利用.NET Core撰写的天气API接口
+此项目仅有一个API路由
 EX: `contoso.azurewebsites.net/WeatherForecast`
 
-Clone至本地後可利用Visual Studio 建置此天氣API項目
+Clone至本地后可利用Visual Studio 建置此天气API项目
 
 ![](Demo1/2020-10-22-16-53-21.png)
 
 ![](Demo1/2020-10-22-16-54-45.png)
 
-> 注意: 採用Docker進行建置需安裝Docker client相關工具
+> 注意: 采用Docker进行建置需安装Docker client相关工具
 
-## Demo 環節
+## Demo 环节
 
  1. 利用Github Action 完成App Service中的部署
 
-    - [部署一：將此API部署至App Service Windows中](https://github.com/08Alan/GithubActionDemo/blob/master/Demo1-1.md)
+    - [部署一：将API部署至App Service Windows中](https://github.com/08Alan/GithubActionDemo/blob/master/Demo1-1.md)
 
-    - [部署二：將此API部署至App Service for Container且利用Visual Studio推送容器](https://github.com/08Alan/GithubActionDemo/blob/master/Demo1-2.md)
+    - [部署二：将API部署至App Service for Container且利用Visual Studio推送容器]](https://github.com/08Alan/GithubActionDemo/blob/master/Demo1-2.md)
 
   2. Github Security
 
-    - Dependabot：掃描代碼安全漏洞
+    - Dependabot：扫描代码安全漏洞
 
-    - Code Scanning：利用CodeQL進行CICD流程時的代碼漏洞掃描
+    - Code Scanning：利用CodeQL进行CICD流程时的代码漏洞扫描
 
-  3. Github CodeSpaces 代碼遠程協作功能
+  3. Github CodeSpaces 代码远程协作功能
 
-  4. Github Project 達成項目工作流程控管
+  4. Github Project 达成项目工作流程控管
