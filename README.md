@@ -1,4 +1,4 @@
-# GithubActionDemo New Features Demo
+# Github New Features Demo
 
 ## 环境配置：
 
