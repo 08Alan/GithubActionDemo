@@ -1,5 +1,7 @@
 # Github New Features Demo
 
+![](README/2020-10-25-18-22-57.png)
+
 ## 环境配置：
 
 - Github Personal Account
