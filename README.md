@@ -19,7 +19,7 @@ Azure Resource：
 ![](README/2020-10-22-16-34-13.png)
 
 ## 项目说明
-alanAPI是一个利用.NET Core撰写的天气API接口
+Weather API是一个利用.NET Core撰写的天气API接口
 此项目仅有一个API路由
 EX: `contoso.azurewebsites.net/WeatherForecast`
 
@@ -35,9 +35,9 @@ Clone至本地后可利用Visual Studio 建置此天气API项目
 
  1. 利用Github Action 完成App Service中的部署
 
-    - [部署一：将API部署至App Service Windows中](https://github.com/08Alan/GithubActionDemo/blob/master/Demo1-1.md)
+    - [部署一：API部署至App Service Windows中](https://github.com/08Alan/GithubActionDemo/blob/master/Demo1-1.md)
 
-    - [部署二：将API部署至App Service for Container且利用Visual Studio推送容器](https://github.com/08Alan/GithubActionDemo/blob/master/Demo1-2.md)
+    - [部署二：API部署至App Service for Container且利用Visual Studio推送容器](https://github.com/08Alan/GithubActionDemo/blob/master/Demo1-2.md)
 
  2. Github Security
 
