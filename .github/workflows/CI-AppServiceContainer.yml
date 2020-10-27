@@ -17,7 +17,7 @@ on:
 env:
   AZURE_WEBAPP_NAME: 'GAD-ContainerDemo'    # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web aㄅpp project, defaults to the repository root
-  DOTNET_VERSION: '3.1.100'           # set this to the dot net version to use
+  DOTNET_VERSION: '3.1.100'           # set this to the dot net version to use1
 
 jobs:
   build-and-deploy:
