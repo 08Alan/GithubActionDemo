@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      # Checkout the repoff
+      # Checkout the repo
       - uses: actions/checkout@master
       
       # Setup .NET Core SDK
